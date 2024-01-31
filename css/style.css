@@ -47,6 +47,23 @@ nav {
     color: #ffc107; /* Change color on hover */
 }
 
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
 .Home-content {
     text-align: center;
     max-width: 600px;
@@ -82,27 +99,41 @@ nav {
     color: #fff;
 }
 
-.Our-Packages{
-    display: flex;
-    
+@media only screen and (max-width: 480px) {
+    .Home-content {
+        padding: 20px;
+    }
+
+    .Home-content h1 {
+        font-size: 1.8em;
+    }
+
+    .Home-content p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 6px 12px;
+    }
 }
 
-.kotak1{
-    text-align: center;
+/* General Styles */
+.our-packages {
+    display: flex;
+    justify-content: center;
 }
 
 .kotak1 img {
     display: block;
-    margin-left: 200px;
     max-width: 100%;
-    margin-top: 120px;
     height: auto;
     border-radius: 8px;
 }
 
 .kotak2 {
-    width: 300px;
-    margin: 50px auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -139,6 +170,22 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .our-packages{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kotak2 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
 
 #CallUs {
 
@@ -177,6 +224,9 @@ button {
     color: #333;
 }
 
+
+
+
 .site-footer {
     background-color: #333;
     color: #fff;
@@ -185,6 +235,7 @@ button {
 
 .footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
@@ -193,6 +244,7 @@ button {
 .footer-section {
     flex: 1;
     margin: 0 20px;
+    text-align: center;
 }
 
 h4 {
@@ -209,8 +261,24 @@ a {
 .footer-bottom {
     text-align: center;
     padding-top: 10px;
-    
     color: #fff;
 }
 
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+    .footer-section {
+        flex: 1 0 100%;
+        margin: 10px 0;
+    }
+}
 
+@media only screen and (max-width: 480px) {
+    .footer-section {
+        flex: 1 0 100%;
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
